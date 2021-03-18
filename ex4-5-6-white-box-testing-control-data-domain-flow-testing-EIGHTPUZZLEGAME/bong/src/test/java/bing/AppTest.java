@@ -95,6 +95,8 @@ public class AppTest {
     //##################### New tests to kill mutations ##############################
     @Test
     public void testGetTileFromPuzzleWithIndexZero() throws ExceptionInvalidPosition {
+        // kills 2 mutants of the "changed conditional boundary" kind in line 194 of PuzzleGame
+        // mata 2 mutantes de "changed conditional boundary" na linha 194 de PuzzleGame
         var puzzle = new PuzzleGame(3, new ShufflePuzzleForTesting());
 
         assertThrows(ExceptionInvalidPosition.class, () -> {puzzle.getTile(0, 1);});
@@ -103,7 +105,9 @@ public class AppTest {
 
     @Test
     public void testPutElemtsWithInvalidIndexIntoGrid() throws ExceptionInvalidPosition {
-        var grid = new Grid<String>(1,1);
+        // kills 2 mutants of the "changed conditional boundary" kind in line 18 of Grid
+        // mata 2 mutantes de "changed conditional boundary" na linha 18 de Grid
+        var grid = new Grid<String>(1,1); 
 
         assertDoesNotThrow(() -> {grid.put(0, 1, "stop");});
         assertDoesNotThrow(() -> {grid.put(1, 0, "stop");});
@@ -111,6 +115,8 @@ public class AppTest {
 
     @Test
     public void testGetElemtsWithInvalidIndexFromGrid() throws ExceptionInvalidPosition {
+        // kills 2 mutants of the "changed conditional boundary" kind in line 24 of Grid
+        // mata 2 mutantes de "changed conditional boundary" na linha 24 de Grid
         var grid = new Grid<String>(1,1);
 
         assertDoesNotThrow(() -> {grid.get(0, 1);});
