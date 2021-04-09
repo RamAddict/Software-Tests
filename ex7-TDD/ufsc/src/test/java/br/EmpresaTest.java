@@ -73,7 +73,7 @@ public class EmpresaTest {
         var o = new Ocorrencia("Resumao"+10, ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.ALTA);
         var p = new Projeto();
         this.empresa.addOcorrencia(f, o, p);
-        assertTrue(f.getNumOcorrencias() != 11);
+        assertTrue(f.getNumOcorrencias() == 10);
     }
 
     public void testChangeEstadoTarefa() {

@@ -22,7 +22,7 @@ public class FuncionarioTest {
     }
     @Test
     public void shouldHaveUpTo10Ocorrencias() {
-        assertThat(funcionario.getNumOcorrencias(), lessThanOrEqualTo(10));
+        assertThat(funcionario.getNumOcorrencias(), equalTo(0));
     }
 
     @Test
