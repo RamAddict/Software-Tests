@@ -36,14 +36,14 @@ public class Empresa {
         this.listaProjetosSize.add(projeto);
 	}
 
-    public void addOcorrencia(Funcionario funcionario, Ocorrencia ocorrencia, Projeto p) {
+    public void addOcorrencia(Funcionario funcionario, Ocorrencia ocorrencia, Projeto projeto) {
         if (funcionario.getNumOcorrencias() == 10)
         {
             return;
         }
         this.funcionarioParaOcorrencia.put(funcionario, ocorrencia);
         this.listaOcorrencias.add(ocorrencia);
-        p.addOcorrencia(ocorrencia);
+        projeto.addOcorrencia(ocorrencia);
         funcionario.incrementOcorrencia();
     }
 
@@ -51,12 +51,12 @@ public class Empresa {
         return this.listaOcorrencias.size();
     }
 
-    public Object getOcorrenciaOfFuncionario(Funcionario f) {
-        return this.funcionarioParaOcorrencia.get(f);
+    public Object getOcorrenciaOfFuncionario(Funcionario funcionario) {
+        return this.funcionarioParaOcorrencia.get(funcionario);
     }
 
-    public void closeTarefa(Ocorrencia o) {
-        o.setFechado(false);
+    public void closeTarefa(Ocorrencia ocorrencia) {
+        ocorrencia.setFechado(false);
     }
     
     

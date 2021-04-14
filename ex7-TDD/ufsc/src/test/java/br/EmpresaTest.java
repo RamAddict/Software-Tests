@@ -17,6 +17,15 @@ public class EmpresaTest {
     
     public Empresa empresa;
 
+    public void create10OcorrenciasOnFuncionario(Funcionario funcionario) {
+        for (int i = 0; i != 10; i++) {
+            assertThat(funcionario.getNumOcorrencias(), equalTo(i));
+            var ocorrenciaBugPrioridadeMedia = new Ocorrencia("Resumao"+i, ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
+            var projeto = new Projeto();
+            this.empresa.addOcorrencia(funcionario, ocorrenciaBugPrioridadeMedia, projeto);
+        }
+    }
+
     @BeforeEach
     public void setup()
     {
@@ -53,47 +62,42 @@ public class EmpresaTest {
 
     @Test
     public void shouldGetAddedOcorrencia() {
-        var f = new Funcionario("Tom");
-        var o = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
-        var p = new Projeto();
-        this.empresa.addOcorrencia(f, o, p);
+        var tom = new Funcionario("Tom");
+        var ocorrenciaBugPrioridadeMedia = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
+        var projeto = new Projeto();
+        this.empresa.addOcorrencia(tom, ocorrenciaBugPrioridadeMedia, projeto);
         assertThat(this.empresa.getListaOcorrenciasSize(), equalTo(1));
-        assertThat(this.empresa.getOcorrenciaOfFuncionario(f), equalTo(o));
-        assertThat(p.getSizeListaOcorrencias(), equalTo(1));
+        assertThat(this.empresa.getOcorrenciaOfFuncionario(tom), equalTo(ocorrenciaBugPrioridadeMedia));
+        assertThat(projeto.getSizeListaOcorrencias(), equalTo(1));
     }
     @Test
     public void addMoreThan10OcorrenciasToFuncionario() {
-        var f = new Funcionario("Tom");
-        for (int i = 0; i != 10; i++) {
-            assertThat(f.getNumOcorrencias(), equalTo(i));
-            var o = new Ocorrencia("Resumao"+i, ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
-            var p = new Projeto();
-            this.empresa.addOcorrencia(f, o, p);
-        }
-        var o = new Ocorrencia("Resumao"+10, ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.ALTA);
-        var p = new Projeto();
-        this.empresa.addOcorrencia(f, o, p);
-        assertTrue(f.getNumOcorrencias() == 10);
+        var tom = new Funcionario("Tom");
+        this.create10OcorrenciasOnFuncionario(tom);
+        var ocorrenciaBugPrioridadeAlta = new Ocorrencia("Resumao"+10, ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.ALTA);
+        var projeto = new Projeto();
+        this.empresa.addOcorrencia(tom, ocorrenciaBugPrioridadeAlta, projeto);
+        assertTrue(tom.getNumOcorrencias() == 10);
     }
 
     public void testChangeEstadoTarefa() {
-        var f = new Funcionario("Tom");
-        var o = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
-        var p = new Projeto();
-        this.empresa.addOcorrencia(f, o, p);
-        this.empresa.closeTarefa(o);
-        assert(o.isFechado() == true);
+        var tom = new Funcionario("Tom");
+        var ocorrenciaBugPrioridadeMedia = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
+        var projeto = new Projeto();
+        this.empresa.addOcorrencia(tom, ocorrenciaBugPrioridadeMedia, projeto);
+        this.empresa.closeTarefa(ocorrenciaBugPrioridadeMedia);
+        assert(ocorrenciaBugPrioridadeMedia.isFechado() == true);
     }
 
     public void testCannotChangeAtributesTarefaAfterClosingIt() {
-        var f = new Funcionario("Tom");
-        var o = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
-        var p = new Projeto();
-        this.empresa.addOcorrencia(f, o, p);
-        this.empresa.closeTarefa(o);
-        assert(o.isFechado() == true);
-        o.setTarefa(ETIPO_TAREFA.MELHORIA);
-        assertEquals(o.getTipoTarefa(), ETIPO_TAREFA.BUG);
+        var tom = new Funcionario("Tom");
+        var ocorrenciaBugPrioridadeMedia = new Ocorrencia("Resumao", ETIPO_TAREFA.BUG, EPRIORIDADE_TAREFA.MEDIA);
+        var projeto = new Projeto();
+        this.empresa.addOcorrencia(tom, ocorrenciaBugPrioridadeMedia, projeto);
+        this.empresa.closeTarefa(ocorrenciaBugPrioridadeMedia);
+        assert(ocorrenciaBugPrioridadeMedia.isFechado() == true);
+        ocorrenciaBugPrioridadeMedia.setTarefa(ETIPO_TAREFA.MELHORIA);
+        assertEquals(ocorrenciaBugPrioridadeMedia.getTipoTarefa(), ETIPO_TAREFA.BUG);
     }
 
 }

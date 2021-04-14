@@ -9,6 +9,7 @@ tmp/
 *.bak
 *.swp
 *~.nib
+.vscode
 local.properties
 .settings/
 .loadpath
