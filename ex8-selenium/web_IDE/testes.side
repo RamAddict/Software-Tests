@@ -2,7 +2,7 @@
   "id": "a14b747a-bef4-47b2-a79b-25269c8a9126",
   "version": "2.0",
   "name": "https://duckduckgo.com/?t=lm&amp;q=calculator&amp;ia=calculatorcalculadora",
-  "url": "https://duckduckgo.com/?t=lm&q=calculator&ia=calculator",
+  "url": "https://duckduckgo.com/",
   "tests": [{
     "id": "bb027de3-4c96-43af-bb73-d2540123b95e",
     "name": "1-soma_verifica_resultado",
@@ -524,6 +524,78 @@
         ["xpath=//span[contains(.,'5 × 9')]", "xpath:innerText"]
       ],
       "value": "5 × 9"
+    }]
+  }, {
+    "id": "53085904-2286-4f3d-9964-d22239bff0bc",
+    "name": "procura_nome_google",
+    "commands": [{
+      "id": "c2a932ca-8b1b-411e-b695-75a63a57c4f5",
+      "comment": "",
+      "command": "open",
+      "target": "https://duckduckgo.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a20d2741-f0f8-467e-b7a2-338d8b428734",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1217x704",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fd9e3a9-97eb-4742-b4ce-22c19793185b",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_form_input_homepage",
+      "targets": [
+        ["id=search_form_input_homepage", "id"],
+        ["name=q", "name"],
+        ["css=#search_form_input_homepage", "css:finder"],
+        ["xpath=//input[@id='search_form_input_homepage']", "xpath:attributes"],
+        ["xpath=//form[@id='search_form_homepage']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a143f2d2-d735-421a-a1f8-eb01572e1eb5",
+      "comment": "",
+      "command": "type",
+      "target": "id=search_form_input_homepage",
+      "targets": [
+        ["id=search_form_input_homepage", "id"],
+        ["name=q", "name"],
+        ["css=#search_form_input_homepage", "css:finder"],
+        ["xpath=//input[@id='search_form_input_homepage']", "xpath:attributes"],
+        ["xpath=//form[@id='search_form_homepage']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "!g Arthur Philippi Bianco"
+    }, {
+      "id": "f3457471-9cb1-4dc2-87b9-176e7499d706",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search_form_input_homepage",
+      "targets": [
+        ["id=search_form_input_homepage", "id"],
+        ["name=q", "name"],
+        ["css=#search_form_input_homepage", "css:finder"],
+        ["xpath=//input[@id='search_form_input_homepage']", "xpath:attributes"],
+        ["xpath=//form[@id='search_form_homepage']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aab13023-e526-48df-9619-4878af741571",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.hlcw0c:nth-child(1) > .g:nth-child(1) em",
+      "targets": [
+        ["css=.hlcw0c:nth-child(1) > .g:nth-child(1) em", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div[2]/span/span/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,'Arthur Philippi Bianco')]", "xpath:innerText"]
+      ],
+      "value": "Arthur Philippi Bianco"
     }]
   }],
   "suites": [{
