@@ -1,0 +1,12 @@
+---
+Suite
+---
+!1 Test suite Mercado
+!contents -R2 -g -p -f -h
+Conjunto de testes para validar os seguintes requisitos:
+
+R1 - O sistema deve permitir salvar os dados armazenados em memória durante a execução da aplicação em um arquivo;
+
+R2 - O sistema deve permitir limpar os dados que foram armazenados em um arquivo.
+
+R3 - O sistema deve permitir recuperar os dados que foram armazenados em um arquvo.

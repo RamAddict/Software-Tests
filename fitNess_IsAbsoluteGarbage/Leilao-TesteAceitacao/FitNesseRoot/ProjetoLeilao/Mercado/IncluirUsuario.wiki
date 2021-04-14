@@ -1,0 +1,13 @@
+---
+Test
+---
+<test page>
+
+!| ActionFixture |
+|start|fixtures.MercadoActionFixtureTest|
+|enter|nome|Maria|
+|enter|endereco|Rua A|
+|enter|email|email|
+|enter|cpf|323667674-47|
+|press|cadastrar usuario|
+|check|possui usuario|true|

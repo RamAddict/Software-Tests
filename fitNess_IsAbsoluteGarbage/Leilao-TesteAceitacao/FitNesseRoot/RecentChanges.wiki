@@ -1,0 +1,7 @@
+|ProjetoLeilao||17:43:44 Wed, Apr 14, 2021|
+|ProjetoLeilao.Mercado.CadastrarConjuntoUsuariosComSetUpFixture||17:31:42 qua, abr 14, 2021|
+|ProjetoLeilao.Mercado.CadastrarConjuntoUsuarios||17:22:23 qua, abr 14, 2021|
+|ProjetoLeilao.Mercado.IncluirUsuario||16:28:56 qua, abr 14, 2021|
+|ProjetoLeilao.Mercado||16:11:09 qua, abr 14, 2021|
+|FrontPage||16:03:18 qua, abr 14, 2021|
+|FrontPage.ProjetoLeilao||15:55:43 qua, abr 14, 2021|

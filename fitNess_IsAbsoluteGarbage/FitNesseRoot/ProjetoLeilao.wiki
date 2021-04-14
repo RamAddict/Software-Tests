@@ -1,0 +1,18 @@
+!contents -R2 -g -p -f -h
+!1 '''Projeto Leilão'''
+O objetivo desta ferramenta é gerenciar o cadastro de usuários, produtos e realizar leilão de bens.
+
+!2 Objetivos do Projeto
+ * Objetivo 1:
+ * Objetivo 2:
+
+Configuração da engine para execução dos testes
+!define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
+
+Localização das Fixtures (glue code)
+!path /home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/bin
+
+Biblioteca FitLibrary e dependências
+!path /home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/fitnesse-standalone.jar
+!path /home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/fitlibrary-2.0.jar
+!path /home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/log4j-1.2.17.jar

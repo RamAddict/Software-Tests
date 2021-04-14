@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>ProjetoLeilao.Mercado.IncluirUsuario</rootPath>
+    <executionLog>
+    <testSystem>fit:fitlibrary.suite.FitLibraryServer</testSystem>
+    <command>/home/enzo/.jabba/jdk/adopt@1.11.0-9/bin/java -cp /home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/bin:/home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/fitnesse-standalone.jar:/home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/fitlibrary-2.0.jar:/home/enzo/Downloads/fitnesse/Leilao-TesteAceitacao/log4j-1.2.17.jar  fitlibrary.suite.FitLibraryServer Nitro5 39977 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr>Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at fit.FitServerBridge.&lt;clinit&gt;(FitServerBridge.java:32)
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 10 more
+</stdErr>
+    <exception>FitClient: external process terminated before a connection could be established.</exception>
+    <exception>FitClient: external process terminated before a connection could be established.</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1004</totalRunTimeInMillis>
+</testResults>
+
