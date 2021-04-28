@@ -10,9 +10,9 @@ Configuração da engine para execução dos testes
 !define TEST_RUNNER {fitlibrary.suite.FitLibraryServer}
 
 Localização das Fixtures (glue code)
-!path /home/arhtur/Software-Tests/bruh/Leilao-TesteAceitacao/bin
+!path /home/arhtur/Software-Tests/fitNess_IsAbsoluteGarbage/Leilao-TesteAceitacao/bin/
 
 Biblioteca FitLibrary e dependências
-!path /home/arhtur/Software-Tests/bruh/Leilao-TesteAceitacao/fitnesse-standalone.jar
-!path /home/arhtur/Software-Tests/bruh/Leilao-TesteAceitacao/fitlibrary-2.0.jar
-!path /home/arhtur/Software-Tests/bruh/Leilao-TesteAceitacao/log4j-1.2.17.jar
+!path /home/arhtur/Software-Tests/fitNess_IsAbsoluteGarbage/Leilao-TesteAceitacao/fitnesse-standalone.jar
+!path /home/arhtur/Software-Tests/fitNess_IsAbsoluteGarbage/Leilao-TesteAceitacao/fitlibrary-2.0.jar
+!path /home/arhtur/Software-Tests/fitNess_IsAbsoluteGarbage/Leilao-TesteAceitacao/log4j-1.2.17.jar

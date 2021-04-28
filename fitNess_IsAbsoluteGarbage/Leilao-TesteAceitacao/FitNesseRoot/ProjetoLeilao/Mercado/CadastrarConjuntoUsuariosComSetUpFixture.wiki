@@ -9,7 +9,7 @@ Test
 
 !|fixtures.UsuarioColumnFixtureDoSetupTest|
 |nome|endereco|email|cpf|cadastrar usuario()|
-|Maria|Rua A|email1|327387790-18|true|
+|Maria|Rua A|email1|327387790-18|false|
 |Mariana|Rua B|email2|323667674-47|true|
 |Jose|Rua C|email3|323667674-00|false|
-|Joao|Rua D|email4|8323390518-50|true|
+|Joao|Rua D|email4|832390518-50|true|
