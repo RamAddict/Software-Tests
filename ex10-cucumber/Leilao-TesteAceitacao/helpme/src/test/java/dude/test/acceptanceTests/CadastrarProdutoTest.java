@@ -82,7 +82,7 @@ public class CadastrarProdutoTest {
             expectedResult= false;
             e.printStackTrace();
         }
-        assertEquals(expectedResult, true);
+        assertEquals(true, expectedResult);
         System.out.println("Produto cadastrado com sucesso");
     }
 
